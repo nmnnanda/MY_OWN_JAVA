@@ -2,6 +2,7 @@ package A_Intro_Java;
 
 public class B_FirstProgram {
 
+	int a = 10;
 	public static void main(String[] args) {
 		System.out.println("Hello World!!!!");
 
