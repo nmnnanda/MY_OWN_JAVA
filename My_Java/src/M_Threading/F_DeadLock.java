@@ -1,54 +1,55 @@
 package M_Threading;
 
-public class F_DeadLock {
+	import java.util.concurrent.locks.Lock;
+	import java.util.concurrent.locks.ReentrantLock;
+
+	public class F_DeadLock {
+	    private static final Lock lock1 = new ReentrantLock();
+	    private static final Lock lock2 = new ReentrantLock();
+
 	    public static void main(String[] args) {
-	        // Two shared resources
-	        String resource1 = "Resource 1";
-	        String resource2 = "Resource 2";
-
-	        // Thread 1
 	        Thread thread1 = new Thread(() -> {
-	            synchronized (resource1) {
-	                System.out.println("Thread 1 acquired resource 1");
+	            lock1.lock();
+	            System.out.println("Thread 1 acquired lock 1");
 
-	                // Introduce a delay to allow thread 2 to acquire resource 2
-	                try {
-	                    Thread.sleep(100);
-	                } catch (InterruptedException e) {
-	                    e.printStackTrace();
-	                }
-
-	                System.out.println("Thread 1 waiting for resource 2");
-	                synchronized (resource2) {
-	                    System.out.println("Thread 1 acquired resource 2");
-	                }
+	            try {
+	                Thread.sleep(1000);
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
 	            }
+
+	            lock2.lock();
+	            System.out.println("Thread 1 acquired lock 2");
+
+	            // Perform some operations
+
+	            lock2.unlock();
+	            lock1.unlock();
 	        });
 
-	        // Thread 2
 	        Thread thread2 = new Thread(() -> {
-	            synchronized (resource2) {
-	                System.out.println("Thread 2 acquired resource 2");
+	            lock2.lock();
+	            System.out.println("Thread 2 acquired lock 2");
 
-	                // Introduce a delay to allow thread 1 to acquire resource 1
-	                try {
-	                    Thread.sleep(100);
-	                } catch (InterruptedException e) {
-	                    e.printStackTrace();
-	                }
-
-	                System.out.println("Thread 2 waiting for resource 1");
-	                synchronized (resource1) {
-	                    System.out.println("Thread 2 acquired resource 1");
-	                }
+	            try {
+	                Thread.sleep(1000);
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
 	            }
+
+	            lock1.lock();
+	            System.out.println("Thread 2 acquired lock 1");
+
+	            // Perform some operations
+
+	            lock1.unlock();
+	            lock2.unlock();
 	        });
 
-	        // Start both threads
 	        thread1.start();
 	        thread2.start();
 
-	        // Wait for both threads to complete
+	        // Wait for both threads to finish
 	        try {
 	            thread1.join();
 	            thread2.join();
@@ -56,7 +57,7 @@ public class F_DeadLock {
 	            e.printStackTrace();
 	        }
 
-	        System.out.println("Program execution completed.");
+	        System.out.println("Program completed successfully.");
 	    }
 	}
 
