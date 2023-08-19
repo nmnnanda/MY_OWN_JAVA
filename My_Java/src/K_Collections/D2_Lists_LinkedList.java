@@ -36,12 +36,6 @@ package K_Collections;
 /**  
  Linked LIst = it is a sequence of links which contains items.abstract
  
-• Vector Class:
-- The Vector Class is also dynamically growable and shrinkable collection of objects like an ArrayList class.
-- Vector class is preferred over ArrayList class for multi threaded application.
-- All methods of Vector class are synchronized so that only one thread can execute them at any given time.
-- The main feature of Vector class is that it is thread safet
-
 two types in linked list,
 
 SIngly linked list,       

@@ -8,7 +8,7 @@ public class B_BuiltinExceptions {
 			String str = null;
 			System.out.println(str.length());
 		}catch(Exception e) {
-			System.out.println("length cant be found");
+			System.out.println("length cant be found : "+ e.getMessage());
 		}
 //---------------RunTime exceptions-----------------------------------------------------------		
 		try {

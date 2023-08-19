@@ -9,7 +9,7 @@ package K_Collections;
 	        Queue<String> queue = new LinkedList<>();
 
 	        // Adding elements to the queue
-	        queue.offer("Apple");
+	        queue.add("Apple");
 	        queue.offer("Banana");
 	        queue.offer("Cherry");
 	        queue.offer("Durian");

@@ -14,8 +14,9 @@ public class A_Intro {
 		arr2[4] = 16;
 		
 		for(int i=0; i<=arr.length-1; i++) {
-		System.out.println(arr2[i]+" ");
+		System.out.print(arr2[i]+" ");
 		}
+		System.out.println();
 		// multi dimentional array declaration and defintion
 		
 		// way 1 :

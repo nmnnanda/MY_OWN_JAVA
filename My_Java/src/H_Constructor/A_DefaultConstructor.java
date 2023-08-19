@@ -4,7 +4,7 @@ public class A_DefaultConstructor {
 	    private int count;	    // Define a private instance variable named count
 
 	    public A_DefaultConstructor() {	    // Define the default constructor
-	        count = 541546;	        // Initialize count to 0
+	        count = 12536;	        // Initialize count to 0
 	    }
 
 	    public int getCount() {	    // Define a public method named getCount to retrieve the value of count

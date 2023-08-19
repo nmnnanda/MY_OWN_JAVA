@@ -9,7 +9,7 @@ package M_Threading;
 	public class A_Thread {                   	// Main class
 	    public static void main(String[] args) {
 
-	    	MyThreadA thread = new MyThreadA();	        // Create an instance of MyThread
+	    	MyThreadA thread = new MyThreadA();	        // Create an instance of MyThreadA
 	        thread.start();	        // Start the thread
 	    }
 	}

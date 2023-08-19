@@ -9,7 +9,7 @@ public class D_SwitchCase {
 	    	        Scanner scanner = new Scanner(System.in);	    	        
 	    	                                                     // Prompt the user to enter a number between 1 and 5
 	    	        System.out.println("Enter a number between 1 and 5:");	    	        
-                                                    	    	        // Read the user input as an integer
+                                                         	    	        // Read the user input as an integer
 	    	        int number = scanner.nextInt();	    	        
 	    	                          // Use a switch case statement to perform different actions based on the value of the number
 	    	        switch(number) {   	            

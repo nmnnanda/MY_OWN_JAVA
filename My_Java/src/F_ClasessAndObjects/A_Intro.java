@@ -10,7 +10,7 @@ public class A_Intro {
 //Objects can be tangible or intangible both.
 //Objects have two characteristics states and behaviors	
 //Class represents a set of objects having similar responsibilitie		
-//An object is a real world entity, for example chair, car, pen, bag, apple, et
+//An object is a real world entity, for example chair, car, pen, bag, apple, etc
 	}
 
 }

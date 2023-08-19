@@ -17,7 +17,7 @@ package I_OOPS;
 	    public void makeSound() {
 	        System.out.println("The cat says meow!");
 	    }
-	}
+	} 
 
 	// Main class to test the program
 	public class M_4_Polymophisam {
@@ -35,10 +35,6 @@ package I_OOPS;
 	}
 /**
     Polymorphism is a powerful object-oriented programming concept that allows you to write code 
-    that can work with objects of different types, without having to know the exact type of each 
-    object at compile time.
-    
-    Polymorphism is a powerful object-oriented programming concept that allows you to write code
     that can work with objects of different types, without having to know the exact type of each 
     object at compile time.
 

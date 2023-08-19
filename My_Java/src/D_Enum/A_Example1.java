@@ -30,5 +30,4 @@
 			}else 
 				System.out.println("It's a weekend!");
 		}
-
 	}

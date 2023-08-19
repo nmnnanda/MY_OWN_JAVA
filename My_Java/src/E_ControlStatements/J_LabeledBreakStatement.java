@@ -8,7 +8,7 @@ package E_ControlStatements;
 	        for (int i = 0; i < numbers.length; i++) {              // Outer loop that iterates over the rows of the array	            
 	            for (int j = 0; j < numbers[i].length; j++) {       // Inner loop that iterates over the columns of the array	                
 	                System.out.print(numbers[i][j] + " ");          // Print the current number	                
-	                if (numbers[i][j] == 5) {                       // If the current number is 5, break out of the outer loop
+	                if (numbers[i][j] == 9) {                       // If the current number is 5, break out of the outer loop
 	                    System.out.println("\nBreaking out of outer loop.");
 	                   break outerLoop;                            // labeled break statement
 	                }
